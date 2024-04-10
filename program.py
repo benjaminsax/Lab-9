@@ -4,6 +4,13 @@ def encode(password):
     for letter in p:
         final+=str(int(letter)+3)
     return final
+def decode(code):
+    deco = ''
+    for i in range(len(code)):
+        if int(code[i])-3 <= 0:
+            deco += str(int(code[i])-3 + 10)
+        else:
+            deco += str(int(code[i])-3)
 
 while True:
     print("Menu")
